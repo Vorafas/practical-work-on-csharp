@@ -1,0 +1,7 @@
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\bin\Debug\task_1.4.exe.config
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\bin\Debug\task_1.4.exe
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\bin\Debug\task_1.4.pdb
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\obj\Debug\task_1.4.csprojAssemblyReference.cache
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\obj\Debug\task_1.4.csproj.CoreCompileInputs.cache
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\obj\Debug\task_1.4.exe
+C:\Users\Elshad\source\repos\task_1.4\task_1.4\obj\Debug\task_1.4.pdb
