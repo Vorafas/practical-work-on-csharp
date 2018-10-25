@@ -16,7 +16,7 @@ namespace task_1._4
                 Console.Write("Нельзя вычислить. Введите x: ");
             }
             double a = 1 + x * (Math.Pow(Math.Cos(x), 2)) + (Math.Pow(Math.Sin(x), 3));
-            Console.WriteLine("1 + x cos^2(x) + sin^3(x) = {0}; x = {1}", a, x);
+            Console.WriteLine("1 + xcos^2(x) + sin^3(x) = {0}; x = {1}", a, x);
             Console.ReadLine();
         }
     }
