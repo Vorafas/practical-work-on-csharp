@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task_2
+namespace task_2_for
 {
     class Program
     {
@@ -13,7 +13,8 @@ namespace task_2
             Console.Write("Введите число: ");
             int max = 0;
             int next;
-            while ((int.TryParse(Console.ReadLine(), out next)) && next > 0) {
+            int s;
+            for (s = 0; (int.TryParse(Console.ReadLine(), out next)) && next > 0;) {
                 Console.Write("Для прекрашения ввода введите букву или 0. Введите число: ");
                 if (max < next)
                 {

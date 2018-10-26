@@ -19,7 +19,7 @@ namespace task_2_dowhile
                 if (max < next) {
                     max = next;
                 }
-            } while(int.TryParse(Console.ReadLine(), out next) && next >= 0);
+            } while(int.TryParse(Console.ReadLine(), out next) && next > 0);
             Console.Write("Максимальный элемент в последовательности = {0}", max);
             Console.ReadLine();
         }
