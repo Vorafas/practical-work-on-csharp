@@ -13,7 +13,7 @@ namespace task_1_for
             Console.Write("Введите число: ");
             int summa = 0;
             int next;
-            for (next = 0; int.TryParse(Console.ReadLine(), out next);) {
+            for (next = 0; (int.TryParse(Console.ReadLine(), out next)) && next > 0;) {
                 Console.Write("Для прекрашения ввода введите букву. Введите число: ");
                 if ((next % 2) != 0) {
                     summa += next;

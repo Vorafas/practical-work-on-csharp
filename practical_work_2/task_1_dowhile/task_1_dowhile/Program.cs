@@ -19,7 +19,7 @@ namespace task_1_dowhile
                 if ((next % 2) != 0) {
                     summa += next;
                 }
-            } while (int.TryParse(Console.ReadLine(), out next));
+            } while (int.TryParse(Console.ReadLine(), out next) && next > 0);
             Console.Write("Сумма нечётных чисел = {0}", summa);
             Console.ReadLine();
         }
