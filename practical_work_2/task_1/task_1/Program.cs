@@ -10,13 +10,16 @@ namespace task_1
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число: ");
+            int n = 10;
             int summ = 0;
-            int next = 0;
-            while ((int.TryParse(Console.ReadLine(), out next) && next > 0)) {
-                Console.Write("Для прекрашения ввода введите букву. Введите число: ");
-                if (next % 2 != 0) {
-                    summ += next;
+            int k;
+            for(int i = 0; i < n; i++){
+                Console.Write($"Введите {i+1}-й элемент: ");
+                while (!(int.TryParse(Console.ReadLine(), out k))) {
+                    Console.Write($"Введите {i+1}-й элемент: ");
+                }   
+                if(k % 2 != 0){
+                    summ += k;
                 }
             }
             Console.WriteLine("Сумма нечётных чисел = {0}", summ);
