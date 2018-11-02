@@ -10,17 +10,21 @@ namespace task_1_dowhile
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число: ");
-            int next = 0;
-            int summa = 0;
-            next = Convert.ToInt32(Console.ReadLine());
-            do {
-                Console.Write("Для прекрашения ввода введите букву. Введите число: ");
-                if ((next % 2) != 0) {
-                    summa += next;
+            int n = 10;
+            int summ = 0;
+            int k;
+            int i = 0;
+            do{
+                Console.Write($"Введите {i+1}-й элемент: ");
+                while (!(int.TryParse(Console.ReadLine(), out k))) {
+                    Console.Write($"Введите {i+1}-й элемент: ");
+                }   
+                if(k % 2 != 0){
+                    summ += k;
                 }
-            } while (int.TryParse(Console.ReadLine(), out next) && next > 0);
-            Console.Write("Сумма нечётных чисел = {0}", summa);
+                i++;
+            }while(i < n);
+            Console.WriteLine("Сумма нечётных чисел = {0}", summ);
             Console.ReadLine();
         }
     }
