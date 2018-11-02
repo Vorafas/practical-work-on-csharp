@@ -10,15 +10,21 @@ namespace task_2
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число: ");
+            int i = 0;
             int max = 0;
-            int next;
-            while ((int.TryParse(Console.ReadLine(), out next)) && next > 0) {
-                Console.Write("Для прекрашения ввода введите букву или 0. Введите число: ");
-                if (max < next)
-                {
-                    max = next;
+            int n = 10;
+            int k;
+            while (i < 10) {
+                Console.Write($"Введите {i + 1}-й элемент: ");
+                while(!(int.TryParse(Console.ReadLine(), out k))){
+                    Console.Write($"Введите {i + 1}-й элемент: ");
                 }
+                if(k == 0)
+                    break;
+                if(max < k){
+                    max = k;
+                }
+                i++;
             }
             Console.Write("Максимальный элемент в последовательности = {0}", max);
             Console.ReadLine();
