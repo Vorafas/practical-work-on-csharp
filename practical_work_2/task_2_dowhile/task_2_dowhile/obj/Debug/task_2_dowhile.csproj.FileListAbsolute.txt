@@ -1,0 +1,14 @@
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\bin\Debug\task_2_dowhile.exe.config
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\bin\Debug\task_2_dowhile.exe
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\bin\Debug\task_2_dowhile.pdb
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.csprojAssemblyReference.cache
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.csproj.CoreCompileInputs.cache
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.exe
+C:\Users\Elshad\source\repos\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.pdb
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\bin\Debug\task_2_dowhile.exe.config
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\bin\Debug\task_2_dowhile.exe
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\bin\Debug\task_2_dowhile.pdb
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.csprojAssemblyReference.cache
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.csproj.CoreCompileInputs.cache
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.exe
+C:\Users\Elshad\source\repos\practical_work_2\task_2_dowhile\task_2_dowhile\obj\Debug\task_2_dowhile.pdb

@@ -1,0 +1,7 @@
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\bin\Debug\task_1_dowhile.exe.config
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\bin\Debug\task_1_dowhile.exe
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\bin\Debug\task_1_dowhile.pdb
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\obj\Debug\task_1_dowhile.csprojAssemblyReference.cache
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\obj\Debug\task_1_dowhile.csproj.CoreCompileInputs.cache
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\obj\Debug\task_1_dowhile.exe
+C:\Users\Elshad\source\repos\practical_work_2\task_1_dowhile\task_1_dowhile\obj\Debug\task_1_dowhile.pdb

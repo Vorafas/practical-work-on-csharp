@@ -1,0 +1,7 @@
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\bin\Debug\task_1_while.exe.config
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\bin\Debug\task_1_while.exe
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\bin\Debug\task_1_while.pdb
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\obj\Debug\task_1_while.csprojAssemblyReference.cache
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\obj\Debug\task_1_while.csproj.CoreCompileInputs.cache
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\obj\Debug\task_1_while.exe
+C:\Users\Elshad\source\repos\practical_work_2\task_1_while\task_1_while\obj\Debug\task_1_while.pdb
