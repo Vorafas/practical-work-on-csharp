@@ -12,7 +12,7 @@ namespace permutation
         {
             Console.Write("Введите число n: ");
             int n;
-            while (!(int.TryParse(Console.ReadLine(), out n))) {
+            while (!(int.TryParse(Console.ReadLine(), out n)) || n <= 0) {
                 Console.Write("Введите число n: ");
             }
             Random rnd = new Random();
