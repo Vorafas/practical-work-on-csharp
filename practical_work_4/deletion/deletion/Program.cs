@@ -19,8 +19,6 @@ namespace deletion
             int[] numbers = new int[n];
             for (int i = 0; i < n; i++) {
                 numbers[i] = rnd.Next(0, 100);
-            }
-            for (int i = 0; i < numbers.Length; i++) {
                 Console.WriteLine($"n[{i}] = {numbers[i]}");
             }
             Console.Write("Введите номер удаляемого элемента : ");
@@ -29,12 +27,19 @@ namespace deletion
             {
                 Console.Write("Введите номер удаляемого элемента : ");
             }
-            var numbersList = numbers.ToList();
-            numbersList.RemoveAt(a);
-            var numbersArr = numbersList.ToArray();
-            for (int i = 0; i < numbersArr.Length; i++)
+            n = n - 1;
+            int[] arr = new int[n];
+            for (int i = 0, d = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine($"n[{i}] = {numbersArr[i]}");
+                if (i == a)
+                {
+                    i++;
+                }
+                arr[d] = numbers[i];
+                d++;
+            }
+            for (int i = 0; i < arr.Length; i++) {
+                Console.WriteLine($"arr[{i}] = {arr[i]}");
             }
             Console.ReadLine();
         }
