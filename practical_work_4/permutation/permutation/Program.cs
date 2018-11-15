@@ -22,19 +22,18 @@ namespace permutation
                 Console.WriteLine($"n[{i}] = {numbers[i]}");
             }
             Console.WriteLine("Положительные элементы переставлены в начало массива, отрицательные - в конец");
-            var numbersList = numbers.ToList();
-            int r;
-            for (var i = 0; i < n; i++) {
-                if (numbersList[i] < 0) {
-                    r = numbersList[i];
-                    numbersList.RemoveAt(i);
-                    numbersList.Insert(0, r);
+            int[] arr = new int[n];
+            for(int i = 0, c = n - 1, d = 0, e = 0; d < arr.Length; d++, e++){
+                if(numbers[e] < 0){
+                    arr[i] = numbers[e];
+                    i++;
+                }else{
+                    arr[c] = numbers[e];
+                    c--;
                 }
             }
-            var numbersArr = numbersList.ToArray();
-            for (int i = 0; i < numbersArr.Length; i++) {
-                Console.WriteLine($"n[{i}] = {numbersArr[i]}");
-            }
+            for(int i = 0; i < arr.Length; i++)
+                Console.WriteLine($"arr[{i}] = {arr[i]}");
             Console.ReadLine();
         }
     }
