@@ -21,19 +21,22 @@ namespace adding
                 numbers[i] = rnd.Next(1, 100);
                 Console.WriteLine($"n[{i}] = {numbers[i]}");
             }
-            Console.Write("Введите число :");
+            Console.Write("Введите число : ");
             int a;
             while(!(int.TryParse(Console.ReadLine(), out a)) || n <=0){
                 Console.Write("Введите число :");
             }
-            var numbersList = numbers.ToList();
-            for(int i = n; i < (n + a); i++){
-                numbersList.Insert(i, rnd.Next(0, 100));
+            int b = n + a;
+            int[] arr = new int[b];
+            for(int i = 0; i < a; i++){
+                arr[i] = rnd.Next(1, 100);
             }
-            var numbersArr = numbersList.ToArray();
-            for(var i = 0; i < numbersArr.Length; i++){
-                Console.WriteLine($"n[{i}] = {numbersArr[i]}");
+            for(int i = a, c = 0; i < arr.Length; i++){
+                arr[i] = numbers[c];
+                c++;
             }
+            for(int i = 0; i < arr.Length; i++)
+                Console.WriteLine($"arr[{i}] = {arr[i]}");
             Console.ReadLine();
         }
     }
