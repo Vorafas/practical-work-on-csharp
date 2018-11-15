@@ -19,16 +19,15 @@ namespace first_even
             int[] numbers = new int[n];
             for (int i = 0; i < n; i++) {
                 numbers[i] = rnd.Next(1, 100);
-                Console.WriteLine($"n[{n}] = {numbers[i]}");
+                Console.WriteLine($"n[{i}] = {numbers[i]}");
             }
             var numbersList = numbers.ToList();
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (numbers[i] % 2 == 0) {
-                    Console.WriteLine($"Первый четный 'элемент в массиве {numbers[i]}");
+                    Console.WriteLine($"Первый четный элемент в массиве {numbers[i]}");
                     break;
                 }
-
             }
             Console.ReadLine();
         }

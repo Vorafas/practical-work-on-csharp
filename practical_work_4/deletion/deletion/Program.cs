@@ -29,14 +29,17 @@ namespace deletion
             }
             n = n - 1;
             int[] arr = new int[n];
-            for (int i = 0, d = 0; i < numbers.Length; i++)
+            for (int i = 0, d = 0; i < numbers.Length; i++, d++)
             {
                 if (i == a)
                 {
                     i++;
                 }
+                if (i > numbers.Length - 1)
+                {
+                    break;
+                }
                 arr[d] = numbers[i];
-                d++;
             }
             for (int i = 0; i < arr.Length; i++) {
                 Console.WriteLine($"arr[{i}] = {arr[i]}");
