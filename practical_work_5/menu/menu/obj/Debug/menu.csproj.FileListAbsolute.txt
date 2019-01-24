@@ -1,6 +1,0 @@
-C:\Users\User\Desktop\menu\menu\bin\Debug\menu.exe.config
-C:\Users\User\Desktop\menu\menu\bin\Debug\menu.exe
-C:\Users\User\Desktop\menu\menu\bin\Debug\menu.pdb
-C:\Users\User\Desktop\menu\menu\obj\Debug\menu.csprojResolveAssemblyReference.cache
-C:\Users\User\Desktop\menu\menu\obj\Debug\menu.exe
-C:\Users\User\Desktop\menu\menu\obj\Debug\menu.pdb
