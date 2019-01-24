@@ -1,6 +1,0 @@
-C:\Users\LocalUser\Desktop\overall\overall\bin\Debug\overall.exe.config
-C:\Users\LocalUser\Desktop\overall\overall\obj\Debug\overall.csprojResolveAssemblyReference.cache
-C:\Users\LocalUser\Desktop\overall\overall\bin\Debug\overall.exe
-C:\Users\LocalUser\Desktop\overall\overall\bin\Debug\overall.pdb
-C:\Users\LocalUser\Desktop\overall\overall\obj\Debug\overall.exe
-C:\Users\LocalUser\Desktop\overall\overall\obj\Debug\overall.pdb
