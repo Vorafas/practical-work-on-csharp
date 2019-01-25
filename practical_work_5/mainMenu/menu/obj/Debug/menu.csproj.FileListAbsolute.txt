@@ -1,0 +1,6 @@
+C:\Users\LocalUser\Desktop\practical_work_on_csharp-master\practical_work_5\menu\menu\bin\Debug\menu.exe.config
+C:\Users\LocalUser\Desktop\practical_work_on_csharp-master\practical_work_5\menu\menu\bin\Debug\menu.exe
+C:\Users\LocalUser\Desktop\practical_work_on_csharp-master\practical_work_5\menu\menu\bin\Debug\menu.pdb
+C:\Users\LocalUser\Desktop\practical_work_on_csharp-master\practical_work_5\menu\menu\obj\Debug\menu.csprojResolveAssemblyReference.cache
+C:\Users\LocalUser\Desktop\practical_work_on_csharp-master\practical_work_5\menu\menu\obj\Debug\menu.exe
+C:\Users\LocalUser\Desktop\practical_work_on_csharp-master\practical_work_5\menu\menu\obj\Debug\menu.pdb
