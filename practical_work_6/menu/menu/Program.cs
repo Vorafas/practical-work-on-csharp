@@ -136,12 +136,12 @@ namespace menu
 
         static void GetText(string text) {
             Console.WriteLine(text);
-            Console.WriteLine();
         }
 
         static int GetNumber(string text) {
             int number;
             do {
+                Console.WriteLine();
                 Console.Write(text);
             } while (!(int.TryParse(Console.ReadLine(), out number)) || number <= 0 || number >= 5);
             return number;
@@ -156,6 +156,66 @@ namespace menu
                 array[i] = num;
             }
             return array;
+        }
+
+        static string[] GetStirng(string txt)
+        {
+            string text;
+            do
+            {
+                Console.Write(txt);
+                text = Console.ReadLine();
+            } while (false);
+            text = text.Replace(".", ".\\");
+            text = text.Replace("!", "!\b");
+            text = text.Replace("?", "?\f");
+            string [] sentense = text.Split(new char[] { '\\', '\b', '\f' });
+
+            return sentense;
+        }
+
+        static void GetArray1(string[] charArr)
+        {
+            for (int i = 0; i < charArr.Length; i++)
+            {
+                Console.WriteLine($"{charArr[i]}");
+            }
+        }
+
+        static string[] GetChangedArray(string[] array) {
+            string[] newArr = new string [array.Length];
+            //GetArray1(array);
+            //GetArray1(newArr);
+            //Console.WriteLine(array.Length + "\n" + newArr.Length);
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (i == 0)
+                {
+                    newArr[0] = array[array.Length - 1];
+                }
+                else if (i == array.Length - 1)
+                {
+                    newArr[array.Length - 1] = array[0];
+                }
+                else
+                {
+                    if (i != 0 || i != array.Length - 1)
+                    {
+                        newArr[i] = array[i];
+                    }
+
+                }
+            }
+            return newArr;
+        }
+
+        static void GetStringArr(string[] array)
+        {
+            string text = "";
+            foreach (string s in array) {
+                text += s.Trim() + " ";
+            }
+            Console.WriteLine(text.Trim());
         }
 
         static void Main(string[] args)
@@ -181,7 +241,7 @@ namespace menu
                             case 2:
                                 charArr = GetRandomArr(randomChar);
                                 GetArray(charArr);
-                                Console.WriteLine();
+                                Console.WriteLine("Обработанный массив");
                                 break;
                         }
                         if (charArr == null)
@@ -191,10 +251,12 @@ namespace menu
                         Result(ref charArr, vowels);
                         break;
                     case 2:
-                        Console.Write("2");
+                        string[] str = GetStirng("Введите символы :");
+                        string[] newArr = GetChangedArray(str);
+                        GetStringArr(newArr);
                         break;
                     case 3:
-                        Console.Write("3");
+                        GetText("1. Удалить элемент из массива. \n2. Поменять местами элементы массива.\n3. Вывести меню. \n4. Выход");
                         break;
                     case 4:
                         flag = true;
