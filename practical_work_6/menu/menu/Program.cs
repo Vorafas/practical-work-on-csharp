@@ -166,11 +166,11 @@ namespace menu
                 Console.Write(txt);
                 text = Console.ReadLine();
             } while (false);
-            text = text.Replace(".", ".\\");
-            text = text.Replace("!", "!\b");
-            text = text.Replace("?", "?\f");
+            text = text.Trim();
+            text = text.Replace(".", ".\\").Trim();
+            text = text.Replace("!", "!\b").Trim();
+            text = text.Replace("?", "?\f").Trim();
             string [] sentense = text.Split(new char[] { '\\', '\b', '\f' });
-
             return sentense;
         }
 
@@ -183,23 +183,23 @@ namespace menu
         }
 
         static string[] GetChangedArray(string[] array) {
-            string[] newArr = new string [array.Length];
+            string[] newArr = new string [array.Length - 1];
             //GetArray1(array);
             //GetArray1(newArr);
             //Console.WriteLine(array.Length + "\n" + newArr.Length);
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
                 if (i == 0)
                 {
-                    newArr[0] = array[array.Length - 1];
+                    newArr[0] = array[array.Length - 2];
                 }
-                else if (i == array.Length - 1)
+                else if (i == array.Length - 2)
                 {
-                    newArr[array.Length - 1] = array[0];
+                    newArr[array.Length - 2] = array[0];
                 }
                 else
                 {
-                    if (i != 0 || i != array.Length - 1)
+                    if (i != 0 || i != array.Length - 2)
                     {
                         newArr[i] = array[i];
                     }
@@ -215,6 +215,7 @@ namespace menu
             foreach (string s in array) {
                 text += s.Trim() + " ";
             }
+            Console.WriteLine("Выполнена обработка строки.");
             Console.WriteLine(text.Trim());
         }
 
