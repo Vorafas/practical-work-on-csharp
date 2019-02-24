@@ -44,9 +44,9 @@ namespace task_1
             }
         }
 
-        private void redoneArr(int[] arr) {
+        private void PrintArray(int[] arr, TextBox element) {
             for (int i = 0; i < arr.Length; i++) {
-                textBox2.Text += $"arr[{i}] = {arr[i]}" + Environment.NewLine;
+                element.Text += $"array[{i}] = {arr[i]}" + Environment.NewLine;
             }
         }
 
@@ -71,12 +71,29 @@ namespace task_1
                             label4.Text = $"Введите {currentNumber = currentNumber - 2} элемент массива";
                             textBox1.Enabled = false;
                             textBox1.Clear();
-                            redoneArr(arr);
+                            PrintArray(arr, textBox2);
+                            redoneArray(arr);
                         }
                     }
                 }
             }
         }
-        
+
+        private void redoneArray(int[] arr) {
+            int counter = 0;
+            for (int i = 0; i < arr.Length; i++) {
+                if (arr[i] % 2 == 0) {
+                    counter++;
+                }
+            }
+            int[] newArr = new int[arr.Length - counter];
+            for (int i = 0, j = 0; i < arr.Length; i++) {
+                if (arr[i] % 2 != 0) {
+                    newArr[j] = arr[i];
+                    j++;
+                }
+            }
+            PrintArray(newArr, textBox3);
+        }
     }
 }

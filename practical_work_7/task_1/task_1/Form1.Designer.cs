@@ -80,9 +80,10 @@
             // arraySize
             // 
             this.arraySize.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.arraySize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.arraySize.Location = new System.Drawing.Point(15, 68);
             this.arraySize.Name = "arraySize";
-            this.arraySize.Size = new System.Drawing.Size(272, 20);
+            this.arraySize.Size = new System.Drawing.Size(272, 23);
             this.arraySize.TabIndex = 2;
             this.arraySize.KeyDown += new System.Windows.Forms.KeyEventHandler(this.arraySize_KeyDown);
             // 
@@ -111,6 +112,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Enabled = false;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.Location = new System.Drawing.Point(391, 184);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
