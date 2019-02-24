@@ -12,6 +12,9 @@ namespace task_1
 {
     public partial class Form1 : Form
     {
+        int[] arr;
+        int number = 0;
+        int currentNumber = 2;
         public Form1()
         {
             InitializeComponent();
@@ -34,10 +37,46 @@ namespace task_1
                     arraySize.Text = $"Элементов в массиве: {number}";
                     arraySize.Enabled = false;
                     textBox1.Enabled = true;
-                    int[] arr = new int[number];
+                    arr = new int[number];
+                    label4.Text = "Введите 1 элемент массива";
+                    textBox1.Focus();
                 }
             }
         }
 
+        private void redoneArr(int[] arr) {
+            for (int i = 0; i < arr.Length; i++) {
+                textBox2.Text += $"arr[{i}] = {arr[i]}" + Environment.NewLine;
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            int i;
+            if (e.KeyCode == Keys.Enter) {
+                if (number < arr.Length)
+                {
+                    if (!(int.TryParse(textBox1.Text, out i)))
+                    {
+                        textBox1.Clear();
+                        return;
+                    }
+                    if(i > 0)
+                    {
+                        label4.Text = $"Введите {currentNumber++} элемент массива";
+                        arr[number] = i;
+                        number++;
+                        textBox1.Clear();
+                        if (number == arr.Length) {
+                            label4.Text = $"Введите {currentNumber = currentNumber - 2} элемент массива";
+                            textBox1.Enabled = false;
+                            textBox1.Clear();
+                            redoneArr(arr);
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
