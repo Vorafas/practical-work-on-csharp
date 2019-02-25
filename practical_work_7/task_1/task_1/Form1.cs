@@ -25,57 +25,72 @@ namespace task_1
             Close();
         }
 
+        private void GetNumber() {
+            int number;
+            if (!(int.TryParse(arraySize.Text, out number)))
+            {
+                arraySize.Clear();
+            }
+            if (number > 0)
+            {
+                arraySize.Text = $"Элементов в массиве: {number}";
+                arraySize.Enabled = false;
+                textBox1.Enabled = true;
+                button1.Enabled = false;
+                button2.Enabled = true;
+                arr = new int[number];
+                label4.Text = "Введите 1 элемент массива";
+                textBox1.Focus();
+            }
+        }
+
         private void arraySize_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) {
-                int number;
-                if (!(int.TryParse(arraySize.Text, out number)))
-                { 
-                    arraySize.Clear();
-                }
-                if (number > 0) {
-                    arraySize.Text = $"Элементов в массиве: {number}";
-                    arraySize.Enabled = false;
-                    textBox1.Enabled = true;
-                    arr = new int[number];
-                    label4.Text = "Введите 1 элемент массива";
-                    textBox1.Focus();
-                }
+                GetNumber();
             }
         }
 
-        private void PrintArray(int[] arr, TextBox element) {
+        private void PrintArray(int[] arr, TextBox element, string text) {
             for (int i = 0; i < arr.Length; i++) {
                 element.Text += $"array[{i}] = {arr[i]}" + Environment.NewLine;
             }
+            element.Text += $"{text}" + Environment.NewLine;
+            element.Text.Trim();
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {
+        private void FillArray() {
             int i;
-            if (e.KeyCode == Keys.Enter) {
-                if (number < arr.Length)
+            if (number < arr.Length)
+            {
+                if (!(int.TryParse(textBox1.Text, out i)))
                 {
-                    if (!(int.TryParse(textBox1.Text, out i)))
+                    textBox1.Clear();
+                    return;
+                }
+                if (i > 0)
+                {
+                    label4.Text = $"Введите {currentNumber++} элемент массива";
+                    arr[number] = i;
+                    number++;
+                    textBox1.Clear();
+                    if (number == arr.Length)
                     {
+                        label4.Text = $"Введите {currentNumber = currentNumber - 2} элемент массива";
+                        textBox1.Enabled = false;
+                        button2.Enabled = false;
                         textBox1.Clear();
-                        return;
-                    }
-                    if(i > 0)
-                    {
-                        label4.Text = $"Введите {currentNumber++} элемент массива";
-                        arr[number] = i;
-                        number++;
-                        textBox1.Clear();
-                        if (number == arr.Length) {
-                            label4.Text = $"Введите {currentNumber = currentNumber - 2} элемент массива";
-                            textBox1.Enabled = false;
-                            textBox1.Clear();
-                            PrintArray(arr, textBox2);
-                            redoneArray(arr);
-                        }
+                        PrintArray(arr, textBox2, "");
+                        redoneArray(arr);
                     }
                 }
+            }
+        }
+        
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                FillArray();
             }
         }
 
@@ -93,7 +108,25 @@ namespace task_1
                     j++;
                 }
             }
-            PrintArray(newArr, textBox3);
+            if(counter == 0){
+                PrintArray(newArr, textBox3, "Массив не изменен");
+            }else if(arr.Length - counter == 0)
+            {
+                PrintArray(newArr, textBox3, "Массив пуст");
+            }
+            else {
+                PrintArray(newArr, textBox3, "");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetNumber();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FillArray();
         }
     }
 }
