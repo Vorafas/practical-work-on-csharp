@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -127,6 +128,27 @@ namespace task_1
         private void button2_Click(object sender, EventArgs e)
         {
             FillArray();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter streamWriter = new StreamWriter(openFileDialog.FileName);
+                streamWriter.WriteLine(textBox2.Text);
+                streamWriter.Close();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName);
+                streamWriter.WriteLine(textBox2.Text);
+                streamWriter.Close();
+                //textBox2.SaveFile(saveFileDialog.FileName);
+            }
         }
     }
 }
